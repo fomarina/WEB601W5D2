@@ -3,10 +3,12 @@
       <title>The jQuery Example</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
       </script>
-		
+
       <script>
          $(document).ready(function() {
-            
+            $("#btn").click(function() {
+               $("#showinfo").load('/jq/text.txt');
+            });
          });
       </script>
       <style>
@@ -18,12 +20,12 @@
          }
       </style>
    </head>
-	
+
    <body>
       <p>Click button to load /jq/text.txt file</p>
-		
+
       <div id = "showinfo" style = "background-color:cde;">SHOW DATA</div>
-		
+
       <input type = "button" id = "btn" value = "Load Data" />
    </body>
 </html>
